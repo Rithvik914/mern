@@ -9,7 +9,6 @@ import {
   Text,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconLogin } from '@tabler/icons-react';
 import { NavLink, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import {
@@ -63,7 +62,6 @@ export function HeaderMegaMenu() {
                 variant="default"
                 component={Link}
                 to="/login"
-                leftSection={<IconLogin />}
               >
                 Log in
               </Button>

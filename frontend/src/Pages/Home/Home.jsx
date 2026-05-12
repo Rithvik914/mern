@@ -9,7 +9,6 @@ import {
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getIsLoggedIn } from "../../redux/slices/User";
-import { IconLink } from "@tabler/icons-react";
 
 const Home = () => {
   const isLoggedIn = useSelector(getIsLoggedIn);
@@ -40,10 +39,6 @@ const Home = () => {
             textAlign: "center",
           }}
         >
-          <Center>
-            <IconLink size={48} color="#ffffff" />
-          </Center>
-
           <Title
             order={1}
             style={{
@@ -80,6 +75,19 @@ fw={700}
           >
             Get Started
           </Button>
+
+          {isLoggedIn && (
+            <Button
+              size="md"
+              radius="xl"
+              variant="outline"
+              color="white"
+              mt="md"
+              onClick={() => navigate("/profile")}
+            >
+              View Profile
+            </Button>
+          )}
         </div>
       </Container>
     </div>
